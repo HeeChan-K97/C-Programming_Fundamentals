@@ -1,0 +1,77 @@
+Page.189
+------------------------------------------------------------------------------------------------------------------------------------------------------
+문제1: 1이상 100미만의 정수중에서7의 배수와 9의 배수를 출력하는 프로그램을 작성. 단 7의 배수이면서 9의 배수인 정수는 한번만 출력한다.
+
+#include <stdio.h>
+
+int main(void)
+{
+  int i;
+  for(i=1; i<100; i++)
+  {
+      if(i%7==0 || i%9==0)
+          printf("%d", i);
+  }
+  return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+문제2: 두 개의 정수를 입력 받아서 두 수의 차를 출력하는 프로그램을 구현해 보자. 단, 무조건 큰 수에서 작은 수를 뺀 결과를 출력해야 한다. 예를 들어서 입력된
+두 수가 순서에 상관없이 12와 5라면 7이 출력되어야 하고, 입력된 두 수가 순서에 상관없이 4와 16이라면 12가 출력되어야 한다. 즉, 출력 결과는 무조건 0 이상이 되어야 한다.
+
+#include <stdio.h>
+
+int main(void)
+{
+	int num1, num2;
+	int result;
+	printf("Enter Two Integers(a b): ");
+	scanf("%d %d", &num1, &num2);
+
+	if(num2>num1)
+	{
+		result=num2-num1;	
+	}
+	else
+	{
+		result=num1-num2;	
+	}
+
+	printf("Result: %d \n", result);
+	return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------
+문제3:학생의 전체 평균점수에 대한 학점을 출력하는 프로그램을 작성. 학생의 성적이 90점 이상이면 A, 80점 이상이면 B, 70점 이상이면 C, 50점 이상이면 D 그리고 그 미만이면 F다.
+프로그램 실행 시 순서대로 국어, 영어, 수학의 점수를 입력 받는다. 그리고는 평균을 구한 다음 그에 적절한 학점을 출력하면 된다.
+
+#include <stdio.h>
+
+int main()
+{
+	int kor, eng, math;
+	float result;
+
+	printf("What is the marks for Korean:");
+	scanf("%d", &kor);
+	printf("What is the marks for English:");
+	scanf("%d", &eng);
+	printf("What is the marks for Mathematics:");
+	scanf("%d", &math);
+
+	result=(kor+eng+math)/3;
+
+	printf("The Average of your results is: %.2f \n", result);
+
+	if(result>=90)
+		printf("You Got A");
+	else if(result>=80)
+		printf("You Got B");
+	else if(result>=70)
+		printf("You Got C");
+	else if(result>=50)
+		printf("You Got D");
+	else
+		printf("Try Harder, F :(");
+	
+	return 0;
+}
