@@ -1,0 +1,17 @@
+<Return Statement>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+ double cubing(double num){
+        double result = num * num * num;
+        return result;
+ }
+
+int main()
+{
+    printf("The Answer is: %f", cubing(7.0));
+
+    return 0;
+}
