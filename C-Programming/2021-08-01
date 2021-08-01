@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*int i=1;
+    while(i<=5){
+        printf("%d\n", i);
+        i++;
+    }
+    */
+    //while루프를 for 루프로 바꾸는 기본적인 방법
+    int i;
+    for(i=1; i<=5; i++){
+        printf("%d \n", i);
+    }
+    printf("\n");
+    //example of printing out elements in an array
+    int lottoNumbers[]={4, 8, 15, 16, 23, 42};
+
+    int x;
+    for(x=0; x<6; x++)
+        printf("%d \n", lottoNumbers[x]);
+
+    return 0;
+}
+
+//anything we can do with while loop we can do them in for loop
